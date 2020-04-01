@@ -15,7 +15,7 @@ class TennisGame1 implements TennisGame
 
     public function wonPoint($playerName)
     {
-        if ('player1' == $playerName) {
+        if ($this->player1 == $playerName) {
             $this->gameScore1++;
         } else {
             $this->gameScore2++;
