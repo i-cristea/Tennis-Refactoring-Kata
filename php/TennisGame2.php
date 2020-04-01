@@ -63,19 +63,12 @@ class TennisGame2 implements TennisGame
         return "{$this->resultPlayer1}-{$this->resultPlayer2}";
     }
 
-    private function player1Score()
-    {
-        $this->pointPlayer1++;
-    }
-
-    private function player2Score()
-    {
-        $this->pointPlayer2++;
-    }
-
     public function wonPoint($player)
     {
-        $addPoints = $player . 'Score';
-        $this->$addPoints();
+        if ($player == $this->namePlayer1) {
+            $this->pointPlayer1++;
+        } else {
+            $this->pointPlayer2++;
+        }
     }
 }
